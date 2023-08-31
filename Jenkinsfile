@@ -13,7 +13,7 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('change dir') {
       steps {
         dir(path: '/home/')
       }
