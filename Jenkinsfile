@@ -1,16 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout code') {
+    stage('Checkout Code') {
       steps {
-        echo 'Building'
         git(url: 'https://github.com/matthewzabikhullaev/docker.git', branch: 'main')
-      }
-    }
-
-    stage('Test') {
-      steps {
-        sh 'echo "Hello World"'
       }
     }
 
