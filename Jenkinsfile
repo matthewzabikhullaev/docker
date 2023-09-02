@@ -13,11 +13,17 @@ pipeline {
               
             }
         }
-         stage (Enable Docker){
+         stage ('Enable Docker'){
              steps {
                    sh 'sudo systemctl enable docker --now'
              }
-         }  
+         } 
+
+        stage('Pull httpd image'){
+            steps {
+                sh 'docker pull httpd'
+            }
+        }
     }
     
 }
