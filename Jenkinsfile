@@ -10,8 +10,14 @@ pipeline {
   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null'
                 sh 'sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y'
-                sh 'sudo systemctl enable docker --now'
+              
             }
         }
+         stage (Enable Docker){
+             steps {
+                   sh 'sudo systemctl enable docker --now'
+             }
+         }  
     }
+    
 }
