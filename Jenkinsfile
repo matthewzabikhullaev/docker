@@ -14,6 +14,10 @@ pipeline {
            
             }
         }
-             sh 'sudo docker pull httpd'
+        stage('Pulling docker image'){
+          steps {
+              sh 'sudo docker pull httpd'
+          }
+        }
     }
 }
