@@ -4,6 +4,7 @@ pipeline {
         stage('Installing Docker on Jenkins server'){
             steps {
               sh 'sudo dnf update -y'
+                sh 'dnf clean all'
               sh 'sudo dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo'
               sh 'sudo dnf install docker-ce --nobest -y'
               sh ' sudo systemctl start docker'
