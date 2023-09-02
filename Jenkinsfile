@@ -21,7 +21,7 @@ pipeline {
 
         stage('Pull httpd image'){
             steps {
-                sh 'docker pull httpd'
+                sh 'sudo docker pull httpd'
             }
         }
     }
