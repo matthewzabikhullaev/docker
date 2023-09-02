@@ -24,5 +24,10 @@ pipeline {
                 sh 'sudo docker pull nginx'
             }
     }
+        stage('build'){
+            steps {
+              sh  'echo "Pulled the images successfully"'
+            }
+}
 }
 }
