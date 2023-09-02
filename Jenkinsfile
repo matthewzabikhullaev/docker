@@ -19,5 +19,10 @@ pipeline {
               sh 'sudo docker pull httpd'
           }
         }
+        stage('Pull nginx package'){
+            steps {
+                sh 'sudo docker pull nginx'
+            }
     }
+}
 }
