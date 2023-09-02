@@ -21,7 +21,7 @@ pipeline {
 
         stage('Pull httpd image'){
             steps {
-                sh 'sudo docker pull httpd'
+                sh 'sudo docker pull nginx'
             }
         }
     }
