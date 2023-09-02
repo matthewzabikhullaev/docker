@@ -15,7 +15,7 @@ pipeline {
 
     stage('List current files and dirs') {
       steps {
-        dir(path: '/tmp/')
+        sh 'cd /tmp'
         sh 'ls -la'
       }
     }
